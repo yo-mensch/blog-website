@@ -18,6 +18,14 @@ app.get("/",(req,res)=>{
   res.render("home",{homePar: homeStartingContent});
 })
 
+app.get("/about", (req,res)=>{
+  res.render("about", {aboutPar: aboutContent});
+})
+
+app.get("/contact", (req, res)=>{
+  res.render("contact", {contactPar: contactContent});
+})
+
 app.listen(3000, function() {
   console.log("Server started on port 3000");
 });
