@@ -3,8 +3,9 @@
     <h1>Home page</h1>
     <p><%= homePar %></p>
     <% postsArr.forEach(element => { %>
-       <a href=<%="/posts/"+element.title%>><h1><%= element.title%></h1></a>
-        <p> <%= element.body.substring(0,100) %> </p> 
+       <a href="/posts/<%=element.title%>">
+        <h1><%= element.title%></h1></a>
+        <p> <%= element.body.substring(0,100) %>... </p> 
     <% }); %>
 </div>
 <%- include('./partials/footer') -%>
