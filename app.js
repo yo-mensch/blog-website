@@ -47,12 +47,11 @@ app.post("/compose", (req,res)=>{
 app.get("/posts/:postTitle", (req,res)=>{
   let matchFound = false;
   for(let i=0; i<posts.length;i++){
-    if(req.params.postTitle === posts[i].title){
+    if(_.lowerCase(req.params.postTitle) === _.lowerCase(posts[i].title)){
       matchFound = true;
-      break;
+      res.render("post", {title: posts[i].title, body: posts[i].body});
     }
   }
-  console.log(matchFound ? "Match found!" : "Match not found :(");
 })
 
 app.listen(3000, function() {
