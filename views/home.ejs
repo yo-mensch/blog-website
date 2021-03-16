@@ -2,7 +2,9 @@
 <div class="container container-fluid">
     <h1>Home page</h1>
     <p><%= homePar %></p>
+    <% for(let i=0; i<postsArr.length;i++) { %>
+    <h1><%= postsArr[i].title%></h1>
+    <p class="itemm"> <%= postsArr[i].body %> </p>
+    <% } %>
 </div>
-
-
 <%- include('./partials/footer') -%>
