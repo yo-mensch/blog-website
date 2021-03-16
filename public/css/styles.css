@@ -14,8 +14,13 @@
     letter-spacing: 5px;
 }
 
-.nav-item a {
+a {
     color: black;
+    text-decoration: none;
+}
+
+.container a:hover{
+    color: #1abc9c;
     text-decoration: none;
 }
 
